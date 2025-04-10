@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/./src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/./src/main/frontend/generated/jar-resources",
+  "staticOutput": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/target/dev-bundle/config",
+  "jarResourcesFolder": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/./src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "/Users/silasweber/Library/Mobile Documents/com~apple~CloudDocs/HSBI/4.Semester/Software-Projekt/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
