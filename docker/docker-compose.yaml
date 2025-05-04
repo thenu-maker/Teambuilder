@@ -1,0 +1,12 @@
+---
+services:
+  teambuilder-postgres:
+    image: postgres:17.3-alpine
+    container_name: teambuilder-postgres
+    environment:
+      POSTGRES_DB: teambuilder
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: test
+    ports:
+      - 5432:5432
+    restart: unless-stopped
