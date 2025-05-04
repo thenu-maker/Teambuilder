@@ -1,4 +1,4 @@
-package com.softwareprojekt.teambuilder.Entities;
+package com.softwareprojekt.teambuilder.entities;
 
 import jakarta.persistence.*;
 
