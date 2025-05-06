@@ -29,7 +29,7 @@ class FlowComponentDirective extends AsyncDirective {
       // If the node is not found, try again later.
       this.__parentNode.__nodeRetryTimeout = setTimeout(() => this.updateContent(part, appid, nodeid));
     } else if (oldNode === newNode) {
-      return;
+
     } else if (oldNode && newNode) {
       parentNode.replaceChild(newNode, oldNode);
     } else if (oldNode) {
