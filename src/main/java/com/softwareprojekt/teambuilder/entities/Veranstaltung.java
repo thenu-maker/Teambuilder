@@ -1,10 +1,6 @@
 package com.softwareprojekt.teambuilder.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -42,6 +38,6 @@ public class Veranstaltung {
         this.semester = semester;
     }
 
-    @ManyToMany
+    @ManyToMany(cascade= CascadeType.PERSIST)
     private List<Teilnehmer> teilnehmer;
 }
