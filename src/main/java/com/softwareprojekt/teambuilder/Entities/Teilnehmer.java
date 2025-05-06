@@ -48,4 +48,7 @@ public class Teilnehmer {
 
     @ManyToMany
     private List<Veranstaltung> veranstaltungen;
+
+    @ManyToMany
+    private List<Gruppe> gruppen;
 }
