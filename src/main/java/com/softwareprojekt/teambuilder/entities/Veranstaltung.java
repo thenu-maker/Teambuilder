@@ -1,4 +1,4 @@
-package com.softwareprojekt.teambuilder.Entities;
+package com.softwareprojekt.teambuilder.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,10 +26,6 @@ public class Veranstaltung {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getTitel() {
         return titel;
     }
@@ -46,6 +42,6 @@ public class Veranstaltung {
         this.semester = semester;
     }
 
-    @ManyToMany (mappedBy = "veranstaltungen")
+    @ManyToMany
     private List<Teilnehmer> teilnehmer;
 }

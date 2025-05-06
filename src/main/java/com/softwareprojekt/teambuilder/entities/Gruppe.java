@@ -1,14 +1,8 @@
-package com.softwareprojekt.teambuilder.Entities;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+package com.softwareprojekt.teambuilder.entities;
+import jakarta.persistence.*;
 
 @Entity
 public class Gruppe {
-
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +10,9 @@ public class Gruppe {
 
     private String Gruppenname;
     private String Anmerkungen;
+
+    @ManyToOne
+    private Gruppenarbeit gruppenarbeit;
 
     public Gruppe(){
 
@@ -39,4 +36,14 @@ public class Gruppe {
     public void setGruppenname(String gruppenname) {
         Gruppenname = gruppenname;
     }
+
+
+    public Gruppenarbeit getGruppenarbeit() {
+        return gruppenarbeit;
+    }
+
+    public void setGruppenarbeit(Gruppenarbeit gruppenarbeit) {
+        this.gruppenarbeit = gruppenarbeit;
+    }
+
 }

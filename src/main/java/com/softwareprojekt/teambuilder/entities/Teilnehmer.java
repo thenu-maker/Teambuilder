@@ -1,4 +1,4 @@
-package com.softwareprojekt.teambuilder.Entities;
+package com.softwareprojekt.teambuilder.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -46,9 +46,6 @@ public class Teilnehmer {
         this.nachname = nachname;
     }
 
-    @ManyToMany
+    @ManyToMany (mappedBy = "teilnehmer")
     private List<Veranstaltung> veranstaltungen;
-
-    @ManyToMany
-    private List<Gruppe> gruppen;
 }
