@@ -8,3 +8,4 @@
 /dataSources.local.xml
 /.copilot-plugin
 /target/
+/src/main/frontend/generated
