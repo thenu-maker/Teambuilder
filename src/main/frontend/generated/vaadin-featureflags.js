@@ -13,7 +13,7 @@ window.Vaadin.featureFlags.cardComponent = false;
 window.Vaadin.featureFlags.react19 = false;
 window.Vaadin.featureFlags.accessibleDisabledButtons = false;
 window.Vaadin.featureFlags.layoutComponentImprovements = false;
-};
+}
 if (window.Vaadin.featureFlagsUpdaters) { 
 const activator = (id) => window.Vaadin.featureFlags[id] = true;
 window.Vaadin.featureFlagsUpdaters.forEach(updater => updater(activator));
