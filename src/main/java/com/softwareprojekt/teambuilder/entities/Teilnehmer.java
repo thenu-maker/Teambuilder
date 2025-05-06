@@ -46,9 +46,6 @@ public class Teilnehmer {
         this.nachname = nachname;
     }
 
-    @ManyToMany
+    @ManyToMany (mappedBy = "teilnehmer")
     private List<Veranstaltung> veranstaltungen;
-
-    @ManyToMany
-    private List<Gruppe> gruppen;
 }

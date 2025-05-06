@@ -42,6 +42,6 @@ public class Veranstaltung {
         this.semester = semester;
     }
 
-    @ManyToMany (mappedBy = "veranstaltungen")
+    @ManyToMany
     private List<Teilnehmer> teilnehmer;
 }
