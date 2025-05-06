@@ -1,4 +1,4 @@
-package com.softwareprojekt.teambuilder.entities;
+package com.softwareprojekt.teambuilder.Entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,11 +11,13 @@ public class Gruppenarbeit {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private long id;
-
     private String titel;
 
     public Gruppenarbeit() {
 
+    }
+    public Gruppenarbeit(String titel) {
+        this.titel = titel;
     }
 
     public long getId() {

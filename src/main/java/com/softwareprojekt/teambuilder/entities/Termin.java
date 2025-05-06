@@ -1,4 +1,4 @@
-package com.softwareprojekt.teambuilder.entities;
+package com.softwareprojekt.teambuilder.Entities;
 
 import jakarta.persistence.*;
 
@@ -11,14 +11,21 @@ public class Termin {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private long id;
-
     private Date datum;
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Gruppenarbeit> gruppenarbeiten = new ArrayList<Gruppenarbeit>();
+    @ManyToMany(cascade =CascadeType.PERSIST)
+    private List<Teilnehmer> teilnehmer = new ArrayList<Teilnehmer>();
 
     public Termin() {
 
     }
+
+    public Termin(Date datum, List<Teilnehmer> teilnehmer) {
+        this.datum = datum;
+        this.teilnehmer = teilnehmer;
+    }
+
 
     public long getId() {
         return id;
@@ -42,5 +49,13 @@ public class Termin {
 
     public void setGruppenarbeiten(List<Gruppenarbeit> gruppenarbeiten) {
         this.gruppenarbeiten = gruppenarbeiten;
+    }
+
+    public List<Teilnehmer> getTeilnehmer() {
+        return teilnehmer;
+    }
+
+    public void setTeilnehmer(List<Teilnehmer> teilnehmer) {
+        this.teilnehmer = teilnehmer;
     }
 }
