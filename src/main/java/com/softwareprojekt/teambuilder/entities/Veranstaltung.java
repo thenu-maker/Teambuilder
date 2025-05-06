@@ -2,11 +2,13 @@ package com.softwareprojekt.teambuilder.entities;
 
 import jakarta.persistence.*;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 @Entity
 public class Veranstaltung {
 
+    //Attribute
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -14,10 +16,17 @@ public class Veranstaltung {
     private String titel;
     private int semester;
 
+    //Möglichkeit zwischen zwei Bewertungseinheiten
+    public enum Bewertungseinheit{
+        Noten, Punkte
+    }
+
+    //Obligatorischer leerer Konstruktor
     public Veranstaltung(){
 
     }
 
+    //Getter + Setter
     public long getId() {
         return id;
     }
@@ -38,6 +47,7 @@ public class Veranstaltung {
         this.semester = semester;
     }
 
+    //Beziehung zu der Teilnehmertabelle (m:n)
     @ManyToMany(cascade= CascadeType.PERSIST)
     private List<Teilnehmer> teilnehmer;
 }

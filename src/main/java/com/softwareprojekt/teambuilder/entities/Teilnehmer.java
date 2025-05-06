@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 public class Teilnehmer {
 
+    //Attribute
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long matrnr;
@@ -18,16 +19,14 @@ public class Teilnehmer {
     private String vorname;
     private String nachname;
 
+    //Obligatorischer leerer Konstruktor
     public Teilnehmer(){
 
     }
 
+    //Getter + Setter
     public long getMatrnr() {
         return matrnr;
-    }
-
-    public void setMatrnr(long matrnr) {
-        this.matrnr = matrnr;
     }
 
     public String getVorname() {
@@ -46,6 +45,7 @@ public class Teilnehmer {
         this.nachname = nachname;
     }
 
+    //Beziehung zu der Veranstaltungstabelle (m:n)
     @ManyToMany (mappedBy = "teilnehmer")
     private List<Veranstaltung> veranstaltungen;
 }
