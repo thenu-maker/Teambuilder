@@ -1,10 +1,6 @@
 package com.softwareprojekt.teambuilder.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -48,4 +44,12 @@ public class Teilnehmer {
     //Beziehung zu der Veranstaltungstabelle (m:n)
     @ManyToMany (mappedBy = "teilnehmer")
     private List<Veranstaltung> veranstaltungen;
+
+    @PrePersist
+    @PreUpdate
+    private void validateVeranstaltungen() {
+        if (veranstaltungen == null || veranstaltungen.isEmpty()) {
+            throw new IllegalStateException("Ein Teilnehmer muss mindestens einer Veranstaltung zugeordnet sein.");
+        }
+    }
 }
