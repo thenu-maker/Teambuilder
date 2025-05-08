@@ -45,11 +45,4 @@ public class Teilnehmer {
     @ManyToMany (mappedBy = "teilnehmer")
     private List<Veranstaltung> veranstaltungen;
 
-    @PrePersist
-    @PreUpdate
-    private void validateVeranstaltungen() {
-        if (veranstaltungen == null || veranstaltungen.isEmpty()) {
-            throw new IllegalStateException("Ein Teilnehmer muss mindestens einer Veranstaltung zugeordnet sein.");
-        }
-    }
 }
