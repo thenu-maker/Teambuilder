@@ -26,6 +26,11 @@ public class Veranstaltung {
 
     }
 
+    public Veranstaltung(String titel, int semester){
+        this.titel = titel;
+        this.semester = semester;
+    }
+
     //Getter + Setter
     public long getId() {
         return id;

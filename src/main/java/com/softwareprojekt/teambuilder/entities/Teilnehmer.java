@@ -20,6 +20,11 @@ public class Teilnehmer {
 
     }
 
+    public Teilnehmer(String vorname, String nachname){
+        this.vorname= vorname;
+        this.nachname= nachname;
+    }
+
     //Getter + Setter
     public long getMatrnr() {
         return matrnr;
