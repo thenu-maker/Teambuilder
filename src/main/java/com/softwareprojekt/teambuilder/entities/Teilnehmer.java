@@ -50,4 +50,8 @@ public class Teilnehmer {
     @ManyToMany (mappedBy = "teilnehmer")
     private List<Veranstaltung> veranstaltungen;
 
+    @OneToMany(mappedBy = "teilnehmer", cascade = CascadeType.ALL)
+    private List<Teilnahme> teilnahmen;
+
+
 }

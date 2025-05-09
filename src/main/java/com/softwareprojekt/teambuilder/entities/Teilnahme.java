@@ -1,10 +1,8 @@
 package com.softwareprojekt.teambuilder.entities;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
+@Entity
 public class Teilnahme {
 
     @Id
@@ -15,8 +13,11 @@ public class Teilnahme {
     private double Praesentationspunkte;
 
     @ManyToOne
+    @JoinColumn(name = "gruppe_id")
     private Gruppe gruppe;
+
     @ManyToOne
+    @JoinColumn(name = "teilnehmer_id")
     private Teilnehmer teilnehmer;
 
     public long getId() {

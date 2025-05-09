@@ -1,6 +1,8 @@
 package com.softwareprojekt.teambuilder.entities;
 import jakarta.persistence.*;
 
+import java.util.*;
+
 @Entity
 public class Gruppe {
 
@@ -12,7 +14,11 @@ public class Gruppe {
     private String Anmerkungen;
 
     @ManyToOne
+    @JoinColumn(name = "gruppenarbeit_id")
     private Gruppenarbeit gruppenarbeit;
+
+    @OneToMany(mappedBy = "gruppe", cascade = CascadeType.ALL)
+    private List<Teilnahme> teilnahmen;
 
     public Gruppe(){
 
